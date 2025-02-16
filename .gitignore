@@ -1,4 +1,6 @@
 *.o
+*.swo
+*.swp
 build/
 .vscode/
 *.log
