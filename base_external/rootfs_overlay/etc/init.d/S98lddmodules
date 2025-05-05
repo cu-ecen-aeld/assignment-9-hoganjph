@@ -127,16 +127,15 @@ function module_unload()
 
 case "$1" in 
     start)
-        # TODO: load drivers
         scull_load
         module_load faulty
+        module_load aesdchar
         modprobe hello
         ;;
     stop)
-        echo "unloading scull driver"
-        # TODO: unload drivers
         scull_unload
         module_unload faulty
+        module_unload aesdchar
         rmmod hello
         ;;
     *)
